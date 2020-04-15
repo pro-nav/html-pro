@@ -1,0 +1,349 @@
+@font-face {
+    font-family: Clip;
+    src: url("Clip.ttf");
+  }
+@font-face {
+    font-family: Pacifico;
+    src: url("Pacifico-Regular.ttf");
+}
+  
+* {
+    box-sizing:border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+body{
+    margin: 0;
+    background-color: #222;
+}
+.switchbox, .board{
+  display: none;
+}
+#a111, #a112, #a113{
+  opacity: 0.5;
+}
+#query{
+  position: absolute;
+  width:200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  font-family: 'Pacifico';
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid orangered;
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  
+}
+.mute-key{
+  border: none;
+  width: auto;
+  height: auto;
+  background: lightseagreen;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px; 
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+svg{
+  position: absolute;
+  top: 70%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+#draw1{
+  stroke-dasharray: 2000;
+  animation: first 30s linear alternate infinite;
+}
+@keyframes first{
+  0%{
+    stroke-dashoffset:2000;
+  }
+  99%{
+    fill: goldenrod;
+  }
+  100%{
+    stroke-dashoffset:0;
+  }
+}
+#draw2{
+  stroke-dasharray: 2000;
+  animation: second 30s linear alternate infinite;
+  animation-delay:3.5s;
+}
+@keyframes second{
+  0%{
+      stroke-dashoffset:2000;
+      stroke: cornsilk;
+  }
+  99%{
+      fill: cornsilk;
+  }
+
+  100%{
+      stroke-dashoffset:0;
+  }
+}
+#draw3{
+  stroke-dasharray: 2000;
+  animation: third 30s linear alternate infinite;
+  animation-delay:7.5s;
+}
+@keyframes third{
+  0%{
+      stroke-dashoffset:2000;
+      stroke: hotpink;
+  }
+  99%{
+      fill: hotpink;
+  }
+
+  100%{
+      stroke-dashoffset:0;
+  }
+}
+#draw4{
+  stroke-dasharray: 2000;
+  animation: fourth 30s linear alternate infinite;
+  animation-delay:13.5s;
+}
+@keyframes fourth{
+  0%{
+      stroke-dashoffset:2000;
+      stroke: sandybrown;
+  }
+  99%{
+      fill: sandybrown;
+  }
+
+  100%{
+      stroke-dashoffset:0;
+  }
+}
+#draw5{
+  stroke-dasharray: 2000;
+  animation: fifth 30s linear alternate infinite;
+  animation-delay:23s;
+}
+@keyframes fifth{
+  0%{
+      stroke-dashoffset:2000;
+      stroke: brown;
+  }
+  99%{
+      fill: brown;
+  }
+
+  100%{
+      stroke-dashoffset:0;
+  }
+}
+
+
+.sign {
+    position: absolute;
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    width:100%;
+    text-align: center;
+    top:30px;
+    letter-spacing: 2;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 80px;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+}
+
+
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .sign .flicker {
+    font-family: "Clip";
+    font-size: 80px;
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .sign .fast-flicker {
+    font-family: "Clip";
+    font-size: 80px;
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  .message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  color: #eafeff;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2df5ff, 0 0 70px #2df5ff, 0 0 80px #2df5ff;
+}
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+.author{
+    position: absolute;
+    color: grey;
+    font-family: "Pacifico", cursive;
+    bottom: 0;
+    padding: 10px
+}
+  
