@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Light Effect</title>
+    <meta name="author" content="Pranav Dudhane">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <section>
+        <div class="light"></div>
+        <h2>Hello There</h2>
+        <p>This is Pranav Dudhane of SY BTech EnTC. Roll No BE18F04F007. This is example of torch effect using our all time faviorate javscript library jQuery. Please do not share this code as it is submitted only for project purposes.</p>
+        <p>Dont read texts. It is only for refrence</p>
+        <p>A farmer looking for a source of water for his farm bought a well from his neighbor. The neighbor was cunning, though, and refused to let the farmer take water from the well. On asking why, he replied, “I sold the well to you, not the water”, and walked away. The distraught farmer didn’t know what to do. So he went to Birbal, a clever man and one of the nine courtiers of Emperor Akbar, for a solution.
+
+                The emperor called the farmer and his neighbor and asked why the man was not letting the farmer draw water from the well. The cunning man said the same thing again, “I sold the well, not the water. So he cannot take my water”.
+                
+                To this, Birbal replied, “All that sounds fine to me. But if you have sold the water and the water is yours, then you have no business keeping your water in his well. Remove the water or use it all up immediately. If not the water will belong to the owner of the well”.
+                
+                Realizing that he’s been tricked and taught his lesson, the man apologized and left.</p>
+            <br><img src="bookpage.png">
+
+    </section>
+    <footer> 
+       <p>This is Pranav Dudhane of SY BTech EnTC. Roll No BE18F04F007.Hover mouse over the screen to see it working. May have compablity issues when using on mobile devices.</p>
+    </footer>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).mousemove(function(e){
+            var X = e.pageX;
+            var Y = e.pageY;
+            $('.light').css('background','radial-gradient(circle at '+X+'px '+Y+'px, transparent, #000 30%');
+        })
+    </script>
+</body>
+</html>
